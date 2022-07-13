@@ -6,8 +6,5 @@
   ],
   "globals":{
     "React": "readonly"
-  },
-  "rules":{
-    "no_unused-vars": [1, {"args": "after-used", "argsIgnorePattern": "^_"}]
   }
 }

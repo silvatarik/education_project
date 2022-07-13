@@ -1,10 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import SearchIcon from '@mui/icons-material/Search'
-import DensityMediumIcon from '@mui/icons-material/DensityMedium';
-import { Button, IconButton } from '@mui/material'
-import Navbar from '../components/pages/home/navigation/Navbar';
-import Hero from '../components/pages/home/Hero';
+import Navbar from '../components/pages/home/navigation/Navbar'
+import Hero from '../components/pages/home/Hero'
 
 const Home: NextPage = () => {
   return (
