@@ -1,6 +1,5 @@
-import React, { ReactElement } from 'react'
-import { Paper, Button } from '@mui/material'
-import Carousel from 'react-multi-carousel';
+import React from 'react'
+import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css';
 
 interface IProps {
@@ -52,7 +51,7 @@ const CarouselImages = ({items, children}: IProps) => {
             autoPlaySpeed={4500}
         >
             {
-                items.map((item, i: number) => <Item key={i} item={item} children={children}/>)
+                items.map((item, i: number) => <Item key={i} item={item}>{children}</Item>)
             }
              
         </Carousel>
