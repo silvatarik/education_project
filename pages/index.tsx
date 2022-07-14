@@ -6,6 +6,7 @@ import CarouselImages from '../components/pages/home/carousels/CarouselImages'
 import WavesAnimation from '../components/effects/WavesAnimation'
 import CardFeature from '../components/pages/home/card/CardFeature'
 import BannerAchievement from '../components/pages/home/banners/BannerAchievement'
+import Teams from '../components/pages/home/Teams'
 
 const images = [{ url: 'hero.jpg' }, { url: 'hero1.jpg' }]
 
@@ -49,11 +50,27 @@ const Home: NextPage = () => {
 
         {/* <!-- Banner  Section ------> */}
 
-        <section id='bannerAchievements'>
+        <section id='bannerAchievements' style={{height: '200px'}}>
           <BannerAchievement />
         </section>
 
         {/* <!-- End Banner Section --> */}
+
+
+        <section className=" py-20 bg-white mt-48">
+          <div className="px-16 mx-auto max-w-7xl">
+            <p className="font-medium tracking-wide text-blue-500 uppercase">OUR TEAM</p>
+            <h2 className="relative max-w-lg mt-5 mb-10 text-4xl font-semibold leading-tight lg:text-5xl">
+              An incredible team of <br />amazing individuals
+            </h2>
+            <div className="grid w-full grid-cols-2 gap-10 sm:grid-cols-3 lg:grid-cols-4">
+              <Teams/>
+              <Teams/>
+              <Teams/>
+              <Teams/>
+            </div>
+          </div>
+        </section>
       </main >
     </>
   )
