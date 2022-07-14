@@ -30,7 +30,7 @@ const Navbar = () => {
     <AppBar  position="absolute" color='transparent' elevation={0}> {/* Elevation prop allow remove shadow from bar*/}
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <AdbIcon className="text-white" sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -45,6 +45,7 @@ const Navbar = () => {
               color: 'inherit',
               textDecoration: 'none',
             }}
+            className="text-white"
           >
             LOGO
           </Typography>

@@ -4,14 +4,14 @@ import 'react-multi-carousel/lib/styles.css';
 
 interface IProps {
     items: IItem[],
-    children:any
+    children: any
 }
 
 interface IItem {
     url: string
 }
 
-function Item({item, children}: any) {
+function Item({ item, children }: any) {
     return (
         <div className='relative bg-fixed bg-center bg-cover bg-no-repeat' style={{ backgroundImage: `url('./img/home/${item.url}')` }}>
             {children}
@@ -19,7 +19,7 @@ function Item({item, children}: any) {
     )
 }
 
-const CarouselImages = ({items, children}: IProps) => {
+const CarouselImages = ({ items, children }: IProps) => {
 
     const responsive = {
         desktop: {
@@ -46,14 +46,17 @@ const CarouselImages = ({items, children}: IProps) => {
             removeArrowOnDeviceType={["tablet", "mobile"]}
             dotListClass="custom-dot-list-style"
             itemClass="carousel-item-padding-40-px"
-            arrows={true}
+            arrows={false}
             renderButtonGroupOutside={true}
             autoPlaySpeed={4500}
+            swipeable={false}
+            draggable={false}
+            transitionDuration={3000}
         >
             {
                 items.map((item, i: number) => <Item key={i} item={item}>{children}</Item>)
             }
-             
+
         </Carousel>
     )
 }
