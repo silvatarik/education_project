@@ -5,6 +5,7 @@
     margin-bottom:-7px; /*Fix for safari gap*/
     min-height:100px;
     max-height:150px;
+    top: -110px; /* Opcional:  esta es unicamente para moverloen el y, adaptado a esta página */
   }
   
   .content {

@@ -2,7 +2,7 @@ import React from 'react'
 
 const WavesAnimation = () => {
     return (
-        <div className='xs-none'>
+        <div className='xs-none -h-3'>
             <svg className="waves" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
                 viewBox="0 24 150 28" preserveAspectRatio="none" shapeRendering="auto">
                 <defs>

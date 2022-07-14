@@ -26,7 +26,6 @@ const Home: NextPage = () => {
           <CarouselImages items={images}>
             <div className='h-full bg-opacity-50 bg-fixed bg-center bg-cover bg-black'>
               <Hero />
-              <WavesAnimation />
             </div>
           </CarouselImages>
         </section>
@@ -36,7 +35,8 @@ const Home: NextPage = () => {
         {/* <!-- Features Section ------> */}
 
         <section id='features'>
-          <div className="container mx-auto py-10">
+        <WavesAnimation />
+          <div className="container mx-auto pt-3 pb-24">
             <h1 className="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white text-center">¿ Nuestros <span className="underline decoration-blue-500">valores</span> ?</h1>
             <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
               <CardFeature />
