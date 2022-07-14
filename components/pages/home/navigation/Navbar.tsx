@@ -27,7 +27,7 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="static" color='transparent' elevation={0}> {/* Elevation prop allow remove shadow from bar*/}
+    <AppBar  position="absolute" color='transparent' elevation={0}> {/* Elevation prop allow remove shadow from bar*/}
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -110,6 +110,7 @@ const Navbar = () => {
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
+                className='text-xl '
               >
                 {page}
               </Button>

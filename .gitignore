@@ -36,3 +36,4 @@ yarn-error.log*
 
 #husky
 /.husky
+commitlint.config.js

@@ -2,6 +2,10 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Navbar from '../components/pages/home/navigation/Navbar'
 import Hero from '../components/pages/home/Hero'
+import CarouselImages from '../components/pages/home/carousels/CarouselImages'
+import WavesAnimation from '../components/effects/WavesAnimation'
+
+const images = [{ url: 'hero.jpg' }, { url: 'hero1.jpg' }]
 
 const Home: NextPage = () => {
   return (
@@ -13,12 +17,13 @@ const Home: NextPage = () => {
       </Head>
       <main>
         {/* <!-- Header Section ------> */}
-        <section className='relative bg-fixed bg-center bg-cover bg-no-repeat' style={{ backgroundImage: "url('./img/home/hero.jpg')" }}>
-          <div className='h-full bg-opacity-50 bg-black'>
-            <Navbar />
+        <Navbar />
+        <CarouselImages items={images}>
+          <div className='h-full bg-opacity-50 bg-fixed bg-center bg-cover bg-black'>
             <Hero />
           </div>
-        </section>
+        </CarouselImages>
+        <WavesAnimation/>
         {/* <!-- End Header Section --> */}
       </main >
     </>
