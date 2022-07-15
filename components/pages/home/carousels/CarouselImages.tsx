@@ -1,6 +1,7 @@
 import React from 'react'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css';
+import CarouselComponent from '../../../CarouselComponent';
 
 interface IProps {
     items: IItem[],
@@ -37,27 +38,16 @@ const CarouselImages = ({ items, children }: IProps) => {
     };
 
     return (
-        <Carousel
+        <CarouselComponent
             responsive={responsive}
-            ssr={true}
-            infinite={true}
-            autoPlay={true}
-            containerClass="carousel-container"
-            removeArrowOnDeviceType={["tablet", "mobile"]}
-            dotListClass="custom-dot-list-style"
-            itemClass="carousel-item-padding-40-px"
+            items={items}
+            Item={Item}
             arrows={false}
-            renderButtonGroupOutside={true}
-            autoPlaySpeed={4500}
-            swipeable={false}
-            draggable={false}
-            transitionDuration={3000}
-        >
-            {
-                items.map((item, i: number) => <Item key={i} item={item}>{children}</Item>)
-            }
-
-        </Carousel>
+            buttonGroup={false}
+            swip={false}
+            drag={false} >
+            {children}
+        </CarouselComponent>
     )
 }
 
